@@ -22,6 +22,7 @@ const Hero = () => {
                         src={heroImage}
                         alt="Hero Image"
                         className="w-64 h-64 md:w-96 md:h-96 lg:w-[400px] lg:h-[400px]"
+                        priority
                     />
                     <Button as={Link} color="primary" href="#contact" variant="flat"
                             className="uppercase tracking-widest hidden lg:flex">
