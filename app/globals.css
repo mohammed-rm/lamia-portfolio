@@ -2,26 +2,41 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
+/*:root {*/
+/*    --primary: rebeccapurple;*/
+/*    --secondary: cornflowerblue;*/
+/*}*/
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
+/*!* Firefox *!*/
+/** {*/
+/*    scrollbar-width: thin;*/
+/*    scrollbar-color: var(--secondary) var(--primary);*/
+/*}*/
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+/*!* Chrome, Edge, and Safari *!*/
+/**::-webkit-scrollbar {*/
+/*    width: 15px;*/
+/*}*/
+
+/**::-webkit-scrollbar-track {*/
+/*    background: var(--primary);*/
+/*    border-radius: 5px;*/
+/*}*/
+
+/**::-webkit-scrollbar-thumb {*/
+/*    background-color: var(--secondary);*/
+/*    border-radius: 14px;*/
+/*    border: 3px solid var(--primary);*/
+/*}*/
+
+@layer components {
+    .section {
+        @apply min-h-screen snap-center relative flex justify-center;
+    }
+    .section-title {
+        @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-lg md:text-4xl;
+    }
+    .button-gradient {
+        @apply bg-gradient-to-r from-green-400 to-purple-500;
+    }
 }
