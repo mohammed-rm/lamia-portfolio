@@ -1,4 +1,5 @@
 import testImage from "public/hero-image.png"
+
 export const skillsInfo = [
     {
         name: "Github",

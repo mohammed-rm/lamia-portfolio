@@ -31,12 +31,12 @@
 
 @layer components {
     .section {
-        @apply min-h-screen snap-center relative flex justify-center;
+        @apply min-h-screen snap-start relative flex justify-center;
     }
     .section-title {
-        @apply absolute top-24 uppercase tracking-[20px] text-gray-500 text-lg md:text-4xl;
+        @apply absolute top-24 uppercase text-gray-600 text-xl sm:text-2xl md:text-4xl font-serif font-bold text-center;
     }
-    .button-gradient {
-        @apply bg-gradient-to-r from-green-400 to-purple-500;
+    .purple-gradient {
+        @apply bg-gradient-to-l from-yellow-500 via-purple-500 to-blue-500 inline-block text-transparent bg-clip-text;
     }
 }

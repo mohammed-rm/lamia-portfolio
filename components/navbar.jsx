@@ -1,16 +1,24 @@
 "use client"
 import React, {useState} from 'react';
 import {
-    Button, Link, Navbar, NavbarBrand, NavbarContent, NavbarItem, NavbarMenu, NavbarMenuItem, NavbarMenuToggle
+    Button,
+    Link,
+    Navbar,
+    NavbarBrand,
+    NavbarContent,
+    NavbarItem,
+    NavbarMenu,
+    NavbarMenuItem,
+    NavbarMenuToggle
 } from "@nextui-org/react";
 
-const menuItems = [{id: "about", title: "About"}, {id: "experience", title: "Experience"}, {
-    id: "skills",
-    title: "Skills"
-}, {id: "projects", title: "Projects"},];
+import Image from "next/image";
+import logo from "public/logo.png"
+import {menuItems} from "@/data/navbar";
+
 const PageNavbar = () => {
     const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-    const [sectionItem, setSectionItem] = useState();
+    const [sectionItem, setSectionItem] = useState("");
 
     return (<Navbar
         isBordered
@@ -23,43 +31,55 @@ const PageNavbar = () => {
         </NavbarContent>
 
         <NavbarMenu>
-            {menuItems.map((item, index) => (
-                <NavbarMenuItem key={`${item}-${index}`}>
+            {menuItems.map((item, index) => {
+                const itemKey = Object.keys(item)[0]
+                const title = Object.values(item)[0].navbarTitle
+                return (<NavbarMenuItem key={index} className="font-serif">
                     <Link
-                        className="w-full"
-                        color={item.id === sectionItem ? "warning" : "foreground"}
-                        href={`#${item.id}`}
+                        className="w-full text-xl"
+                        color={itemKey === sectionItem ? "secondary" : "foreground"}
+                        href={`#${itemKey}`}
                         size="lg"
                         onClick={() => {
                             setIsMenuOpen(false);
-                            setSectionItem(item.id);
+                            setSectionItem(itemKey);
                         }}
                     >
-                        {item.title}
+                        {title}
                     </Link>
-                </NavbarMenuItem>))}
+                </NavbarMenuItem>)
+            })}
         </NavbarMenu>
 
         {/*Desktop */}
         <NavbarBrand>
-            <p className="font-bold text-inherit hidden md:flex">LAMIA CHEKKABA</p>
+            <Image
+                src={logo}
+                className="pt-3 w-36 h-36 hidden md:flex"
+                alt="Logo image"/>
         </NavbarBrand>
         <NavbarContent className="hidden md:flex gap-8" justify="center">
-            {menuItems.map((item, index) => (<NavbarItem
-                key={`${item}-${index}`}
-                isActive={sectionItem === item.id}
-            >
-                <Link
-                    href={`#${item.id}`}
-                    onClick={() => setSectionItem(item.id)}
+            {menuItems.map((item, index) => {
+                const itemKey = Object.keys(item)[0]
+                const title = Object.values(item)[0].navbarTitle
+                return (<NavbarItem
+                    key={index}
                 >
-                    {item.title}
-                </Link>
-            </NavbarItem>))}
+                    <Link
+                        className="font-serif text-xl"
+                        href={`#${itemKey}`}
+                        onClick={() => setSectionItem(itemKey)}
+                        color={itemKey === sectionItem ? "secondary" : "foreground"}
+                    >
+                        {title}
+                    </Link>
+                </NavbarItem>)
+            })}
         </NavbarContent>
         <NavbarContent justify="end">
             <NavbarItem>
-                <Button as={Link} color="primary" href="#contact" variant="flat" className="uppercase lg:hidden">
+                <Button as={Link} color="primary" href="#contact" variant="flat"
+                        className="uppercase lg:hidden rounded-none">
                     Get in touch
                 </Button>
             </NavbarItem>

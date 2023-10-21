@@ -1,4 +1,5 @@
 import testImage from "public/projet.png"
+
 export const projectsInfo = [
     {
         title: "Booking web application",

@@ -1,8 +1,6 @@
 import React from 'react';
-import {Card, CardBody, CardFooter, CardHeader, Divider, Link} from "@nextui-org/react";
+import {Card, CardBody, CardFooter, CardHeader, Divider} from "@nextui-org/react";
 import Image from "next/image";
-import heroImage from "@/public/hero-image.png";
-import {GiNorthStarShuriken} from "react-icons/gi";
 import SkillStars from "@/components/skill-stars";
 
 const SkillCard = ({name, description, imageUrl, stars}) => {
