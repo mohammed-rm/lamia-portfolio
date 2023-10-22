@@ -2,40 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/*:root {*/
-/*    --primary: rebeccapurple;*/
-/*    --secondary: cornflowerblue;*/
-/*}*/
-
-/*!* Firefox *!*/
-/** {*/
-/*    scrollbar-width: thin;*/
-/*    scrollbar-color: var(--secondary) var(--primary);*/
-/*}*/
-
-/*!* Chrome, Edge, and Safari *!*/
-/**::-webkit-scrollbar {*/
-/*    width: 15px;*/
-/*}*/
-
-/**::-webkit-scrollbar-track {*/
-/*    background: var(--primary);*/
-/*    border-radius: 5px;*/
-/*}*/
-
-/**::-webkit-scrollbar-thumb {*/
-/*    background-color: var(--secondary);*/
-/*    border-radius: 14px;*/
-/*    border: 3px solid var(--primary);*/
-/*}*/
-
 @layer components {
     .section {
         @apply min-h-screen snap-start relative flex justify-center;
     }
+
     .section-title {
         @apply absolute top-24 uppercase text-gray-600 text-xl sm:text-2xl md:text-4xl font-serif font-bold text-center;
     }
+
     .purple-gradient {
         @apply bg-gradient-to-l from-yellow-500 via-purple-500 to-blue-500 inline-block text-transparent bg-clip-text;
     }

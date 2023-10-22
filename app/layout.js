@@ -1,20 +1,20 @@
-import './globals.css'
-import {Inter} from 'next/font/google'
-import {Providers} from "@/app/providers";
+import "./globals.css";
+import { Inter } from "next/font/google";
+import { Providers } from "@/app/providers";
 
-const inter = Inter({subsets: ['latin']})
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-    title: 'Lamia Portfolio', description: 'Portfolio',
-}
+  title: "Lamia Portfolio",
+  description: "Portfolio",
+};
 
-export default function RootLayout({children}) {
-    return (
-        <html lang="en" className='light'>
-        <body className={inter.className}>
-        <Providers>
-            {children}
-        </Providers>
-        </body>
-        </html>)
+export default function RootLayout({ children }) {
+  return (
+    <html lang="en" className="light">
+      <body className={inter.className}>
+        <Providers>{children}</Providers>
+      </body>
+    </html>
+  );
 }
