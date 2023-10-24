@@ -28,7 +28,7 @@ const Timeline = ({ experienceInfo }) => {
             className={`lg:hidden absolute w-16 h-14 text-secondary top-7 transform -translate-y-1/2 left-7`}
           />
           <Card
-            className={`font-serif rounded-none max-w-[600px] lg:max-w-[400px] h-fit mr-2 md:mr-0 ml-20 lg:ml-0 bg-opacity-50 
+            className={`cards-style bg-opacity-80 rounded-none max-w-[600px] lg:max-w-[400px] h-fit mr-2 md:mr-0 ml-20 lg:ml-0
             ${index % 2 === 0 ? "lg:ml-20" : "lg:mr-20"}`}
           >
             <CardBody>

@@ -4,7 +4,9 @@ export const projectsInfo = [
   {
     title: "Booking web application",
     description:
-      "Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     codeUrl: "https://github.com",
     applicationUrl: "https://github.com",
     image: testImage,
@@ -12,7 +14,9 @@ export const projectsInfo = [
   {
     title: "Booking web application",
     description:
-      "Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     codeUrl: "https://github.com",
     applicationUrl: "https://github.com",
     image: testImage,
@@ -20,7 +24,9 @@ export const projectsInfo = [
   {
     title: "Booking web application",
     description:
-      "Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     codeUrl: "https://github.com",
     applicationUrl: "https://github.com",
     image: testImage,
@@ -28,7 +34,9 @@ export const projectsInfo = [
   {
     title: "Booking web application",
     description:
-      "Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience. Make beautiful websites regardless of your design experience.",
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit " +
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
     codeUrl: "https://github.com",
     applicationUrl: "https://github.com",
     image: testImage,

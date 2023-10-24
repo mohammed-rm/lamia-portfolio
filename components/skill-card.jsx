@@ -12,7 +12,7 @@ import SkillStars from "@/components/skill-stars";
 const SkillCard = ({ name, description, imageUrl, stars }) => {
   return (
     <div className="relative max-w-[400px] max-h-[220px]">
-      <Card className="rounded-none h-[200px]" shadow>
+      <Card className="rounded-none h-[200px] cards-style bg-opacity-80" shadow>
         <CardHeader className="flex gap-3 justify-end">
           <p className="text-lg font-bold">{name}</p>
         </CardHeader>

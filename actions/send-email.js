@@ -5,7 +5,7 @@ import { validateString } from "@/lib/utils";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendEmail = async (formData) => {
-  let senderName = formData.get("name");
+  const senderName = formData.get("name");
   const senderEmail = formData.get("email");
   const senderMessage = formData.get("message");
 
@@ -24,7 +24,7 @@ export const sendEmail = async (formData) => {
     from: "Contact Form <onboarding@resend.dev>",
     to: process.env.PERSONNAL_EMAIL,
     reply_to: senderEmail,
-    subject: `Test message from ${senderName} : ${senderEmail}`,
+    subject: `New Message From ${senderName} : ${senderEmail}`,
     text: senderMessage,
   });
 

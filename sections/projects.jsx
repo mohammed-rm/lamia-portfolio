@@ -16,8 +16,8 @@ const Projects = () => {
             className="flex flex-col-reverse lg:flex-row lg:even:flex-row-reverse
                                                        lg:gap-8 items-center justify-evenly p-2"
           >
-            <Card className="w-auto gap-8 rounded-none bg-opacity-20">
-              <CardBody className="gap-8 font-serif">
+            <Card className="w-auto rounded-none bg-opacity-80 cards-style">
+              <CardBody className="gap-8">
                 <p className="text-primary text-xl md:text-2xl font-black">
                   {project.title}
                 </p>
