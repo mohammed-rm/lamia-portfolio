@@ -5,30 +5,23 @@ import { validateString } from "@/lib/utils";
 
 const resend = new Resend(process.env.RESEND_API_KEY);
 export const sendEmail = async (formData) => {
-  const senderName = formData.get("name");
+  let senderName = formData.get("name");
   const senderEmail = formData.get("email");
   const senderMessage = formData.get("message");
 
-  if (!validateString(senderName)) {
+  if (
+    !validateString(senderName) ||
+    !validateString(senderEmail) ||
+    !validateString(senderMessage)
+  ) {
     return {
-      message: "Invalid name",
-    };
-  }
-
-  if (!validateString(senderEmail)) {
-    return {
-      message: "Invalid email",
-    };
-  }
-
-  if (!validateString(senderMessage)) {
-    return {
-      message: "Invalid message",
+      type: "error",
+      message: "Invalid form. Please fill in all required fields",
     };
   }
 
   const response = await resend.emails.send({
-    from: "onboarding@resend.dev",
+    from: "Contact Form <contact@mo-rmich.com>", //<onboarding@resend.dev>
     to: process.env.PERSONNAL_EMAIL,
     reply_to: senderEmail,
     subject: `Test message from ${senderName} : ${senderEmail}`,
@@ -37,10 +30,12 @@ export const sendEmail = async (formData) => {
 
   if (!("id" in response)) {
     return {
+      type: "error",
       message: "Failed to send the email",
     };
   }
   return {
+    type: "success",
     message: "Thank you for your email !",
   };
 };

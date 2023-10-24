@@ -9,7 +9,7 @@ const Hero = () => {
   return (
     <section id="hero" className="section items-center">
       <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:justify-evenly">
-        <div className="mt-24 flex flex-col space-y-6 items-center lg:items-start lg:w-1/3">
+        <div className="mt-24 flex flex-col space-y-6 items-center lg:items-start lg:w-2/5">
           <span className="flex flex-col text-center lg:text-start text-4xl md:text-5xl lg:text-6xl font-bold">
             <p>{heroInfo.title}</p>
             <p className="purple-gradient">

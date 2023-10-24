@@ -22,7 +22,7 @@ const Projects = () => {
                   {project.title}
                 </p>
                 <p className="text-sm md:text-lg">{project.description}</p>
-                <div className="flex gap-6">
+                <div className="flex flex-wrap gap-6 justify-center items-center">
                   <Link isExternal href={project.codeUrl}>
                     <Button
                       className="rounded-none tracking-wide text-medium"

@@ -11,6 +11,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        playpen: ["Playpen Sans"],
+      },
       backgroundImage: {
         "gradient-bg":
           "linear-gradient(to right, #3B2667, rgba(2,0,4,1) 91.1% )",
