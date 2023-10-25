@@ -26,9 +26,9 @@ export default function ScrollUp() {
       {
         <Link
           href={"#hero"}
-          className="w-8 h-8 cursor-pointer fixed bottom-2 right-2 lg:bottom-10
+          className="w-8 h-8 cursor-pointer fixed bottom-5 right-5 lg:bottom-10
           lg:right-10 z-20 rounded-full bg-primary/50 flex justify-center
-          items-center"
+          items-center animate-pulse transition-all"
         >
           <GoArrowUp />
         </Link>

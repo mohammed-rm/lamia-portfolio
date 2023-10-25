@@ -28,26 +28,28 @@ const PageNavbar = () => {
       </NavbarContent>
 
       <NavbarMenu>
-        {menuItems.map((item, index) => {
-          const itemKey = Object.keys(item)[0];
-          const title = Object.values(item)[0].navbarTitle;
-          return (
-            <NavbarMenuItem key={index} className="font-serif">
-              <Link
-                className="w-full text-xl"
-                color={itemKey === sectionItem ? "secondary" : "foreground"}
-                href={`#${itemKey}`}
-                size="lg"
-                onClick={() => {
-                  setIsMenuOpen(false);
-                  setSectionItem(itemKey);
-                }}
-              >
-                {title}
-              </Link>
-            </NavbarMenuItem>
-          );
-        })}
+        <>
+          {menuItems.map((item, index) => {
+            const itemKey = Object.keys(item)[0];
+            const title = Object.values(item)[0].navbarTitle;
+            return (
+              <NavbarMenuItem key={index} className="font-serif">
+                <Link
+                  className="w-full text-xl"
+                  color={itemKey === sectionItem ? "secondary" : "foreground"}
+                  href={`#${itemKey}`}
+                  size="lg"
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    setSectionItem(itemKey);
+                  }}
+                >
+                  {title}
+                </Link>
+              </NavbarMenuItem>
+            );
+          })}
+        </>
       </NavbarMenu>
 
       {/*Desktop */}
@@ -59,22 +61,24 @@ const PageNavbar = () => {
         />
       </NavbarBrand>
       <NavbarContent className="hidden md:flex gap-8" justify="center">
-        {menuItems.map((item, index) => {
-          const itemKey = Object.keys(item)[0];
-          const title = Object.values(item)[0].navbarTitle;
-          return (
-            <NavbarItem key={index}>
-              <Link
-                className="font-serif text-xl"
-                href={`#${itemKey}`}
-                onClick={() => setSectionItem(itemKey)}
-                color={itemKey === sectionItem ? "secondary" : "foreground"}
-              >
-                {title}
-              </Link>
-            </NavbarItem>
-          );
-        })}
+        <>
+          {menuItems.map((item, index) => {
+            const itemKey = Object.keys(item)[0];
+            const title = Object.values(item)[0].navbarTitle;
+            return (
+              <NavbarItem key={index}>
+                <Link
+                  className="font-serif text-xl"
+                  href={`#${itemKey}`}
+                  onClick={() => setSectionItem(itemKey)}
+                  color={itemKey === sectionItem ? "secondary" : "foreground"}
+                >
+                  {title}
+                </Link>
+              </NavbarItem>
+            );
+          })}
+        </>
       </NavbarContent>
       <NavbarContent justify="end">
         <NavbarItem>
