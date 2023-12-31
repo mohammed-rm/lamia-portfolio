@@ -2,29 +2,37 @@ export const menuItems = [
   {
     about: {
       id: "about",
-      navbarTitle: "About",
-      sectionTitle: "Let Me Tell You My Story",
-    },
-  },
-  {
-    experience: {
-      id: "experience",
-      navbarTitle: "Experience",
-      sectionTitle: "My Journey Through the Data World",
-    },
-  },
-  {
-    skills: {
-      id: "skills",
-      navbarTitle: "Skills",
-      sectionTitle: "My Data Toolkit",
+      navbarTitle: "Qui suis-je ?",
     },
   },
   {
     projects: {
       id: "projects",
-      navbarTitle: "Projects",
-      sectionTitle: "My Data Adventures: Exploring Insights",
+      navbarTitle: "Mes Projets",
+    },
+  },
+  {
+    certificates: {
+      id: "certificates",
+      navbarTitle: "Mes certificats",
+    },
+  },
+  {
+    badges: {
+      id: "badges",
+      navbarTitle: "Mes badges",
+    },
+  },
+  {
+    blog: {
+      id: "blog",
+      navbarTitle: "Mon blog",
+    },
+  },
+  {
+    volunteering: {
+      id: "volunteering",
+      navbarTitle: "Bénévolat",
     },
   },
 ];

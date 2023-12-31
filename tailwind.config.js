@@ -25,32 +25,17 @@ module.exports = {
       rotate: {
         105: "105deg",
       },
+      fontWeight: {
+        custom: 600,
+      },
       colors: {
-        primary: "#7b5ed9",
-        secondary: "#8ba928",
+        default: "#070708",
+        primary: "#805ad5",
+        secondary: "#d19064",
+        accent: "#43fecf",
       },
     },
   },
   darkMode: "class",
-  plugins: [
-    require("tailwind-scrollbar"),
-    nextui({
-      themes: {
-        light: {
-          colors: {
-            background: "#FFFFFF",
-            foreground: "#11181C",
-            primary: {
-              foreground: "#FFFFFF",
-              DEFAULT: "#7b5ed9",
-            },
-            secondary: {
-              DEFAULT: "#8ba928",
-              foreground: "#7b5ed9",
-            },
-          },
-        },
-      },
-    }),
-  ],
+  plugins: [require("tailwind-scrollbar"), nextui()],
 };

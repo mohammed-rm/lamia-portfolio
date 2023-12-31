@@ -1,8 +1,5 @@
 import About from "@/sections/about";
-import Experience from "@/sections/experience";
-import Skills from "@/sections/skills";
 import Contact from "@/sections/contact";
-import Projects from "@/sections/projects";
 import Hero from "@/sections/hero";
 import PageNavbar from "@/components/navbar";
 import { Toaster } from "sonner";
@@ -19,9 +16,9 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <About />
-      <Experience />
-      <Skills />
-      <Projects />
+      {/*<Experience />*/}
+      {/*<Skills />*/}
+      {/*<Projects />*/}
       <Contact />
     </main>
   );

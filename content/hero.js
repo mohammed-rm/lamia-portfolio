@@ -1,8 +1,7 @@
 export const heroInfo = {
-  title: "Hi, I'am Lamia",
-  role: " Data Scientist",
+  title: "Bienvenue, je suis Lamia",
+  role: "experte en données",
   description:
-    "Welcome to my Portfolio. Here, I don't just analyze data;\n" +
-    "I craft stories from it. Each project is a journey through data,\n" +
-    "a narrative that reveals hidden patterns, and a testament to my passion data.",
+    "Découvrez mon portfolio dédié à l'excellence en matière d'analyse et de gestion des données. " +
+    "Explorez mes projets innovants qui démontrent mon engagement envers la qualité, la précision et l'impact dans le domaine des données.",
 };

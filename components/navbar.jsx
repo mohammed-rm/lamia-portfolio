@@ -11,7 +11,6 @@ import {
   NavbarMenuItem,
   NavbarMenuToggle,
 } from "@nextui-org/react";
-
 import Image from "next/image";
 import logo from "@/public/logo.png";
 import { menuItems } from "@/content/navbar";
@@ -21,46 +20,60 @@ const PageNavbar = () => {
   const [sectionItem, setSectionItem] = useState("");
 
   return (
-    <Navbar isBordered isMenuOpen={isMenuOpen} onMenuOpenChange={setIsMenuOpen}>
-      {/*Mobile*/}
-      <NavbarContent className="md:hidden" justify="start">
+    <Navbar
+      isBordered
+      isMenuOpen={isMenuOpen}
+      onMenuOpenChange={setIsMenuOpen}
+      className="border-b-2 border-accent"
+      maxWidth="xl"
+    >
+      {/* Mobile Navbar Content */}
+      <NavbarContent className="lg:hidden" justify="start">
         <NavbarMenuToggle />
       </NavbarContent>
 
-      <NavbarMenu>
-        <>
-          {menuItems.map((item, index) => {
-            const itemKey = Object.keys(item)[0];
-            const title = Object.values(item)[0].navbarTitle;
-            return (
-              <NavbarMenuItem key={index} className="font-serif">
-                <Link
-                  className="w-full text-xl"
-                  color={itemKey === sectionItem ? "secondary" : "foreground"}
-                  href={`#${itemKey}`}
-                  size="lg"
-                  onClick={() => {
-                    setIsMenuOpen(false);
-                    setSectionItem(itemKey);
-                  }}
-                >
-                  {title}
-                </Link>
-              </NavbarMenuItem>
-            );
-          })}
-        </>
-      </NavbarMenu>
+      {/* Mobile Menu Items */}
+      <NavbarContent className="lg:hidden">
+        <NavbarMenu>
+          <>
+            {menuItems.map((item, index) => {
+              const itemKey = Object.keys(item)[0];
+              const title = Object.values(item)[0].navbarTitle;
+              return (
+                <NavbarMenuItem key={index} className="font-serif">
+                  <Link
+                    className={`w-full text-xl ${
+                      itemKey === sectionItem
+                        ? "text-primary font-semibold"
+                        : "text-default"
+                    }`}
+                    href={`#${itemKey}`}
+                    size="lg"
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      setSectionItem(itemKey);
+                    }}
+                  >
+                    {title}
+                  </Link>
+                </NavbarMenuItem>
+              );
+            })}
+          </>
+        </NavbarMenu>
+      </NavbarContent>
 
-      {/*Desktop */}
+      {/* Desktop Navbar Brand */}
       <NavbarBrand>
         <Image
           src={logo}
-          className="pt-3 w-36 h-36 hidden md:flex"
-          alt="Logo image"
+          className="pt-3 w-36 h-36 hidden lg:flex"
+          alt="Logo of the website"
         />
       </NavbarBrand>
-      <NavbarContent className="hidden md:flex gap-8" justify="center">
+
+      {/* Desktop Menu Items */}
+      <NavbarContent className="hidden lg:flex gap-8" justify="center">
         <>
           {menuItems.map((item, index) => {
             const itemKey = Object.keys(item)[0];
@@ -68,18 +81,26 @@ const PageNavbar = () => {
             return (
               <NavbarItem key={index}>
                 <Link
-                  className="font-serif text-xl"
+                  className={`text-large relative group ${
+                    itemKey === sectionItem
+                      ? "text-primary font-semibold"
+                      : "text-default"
+                  }`}
                   href={`#${itemKey}`}
                   onClick={() => setSectionItem(itemKey)}
                   color={itemKey === sectionItem ? "secondary" : "foreground"}
                 >
-                  {title}
+                  <span>{title}</span>
+                  {/* Underline effect on hover */}
+                  <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-secondary transition-all duration-100 group-hover:w-full" />
                 </Link>
               </NavbarItem>
             );
           })}
         </>
       </NavbarContent>
+
+      {/* CTA Button */}
       <NavbarContent justify="end">
         <NavbarItem>
           <Button
@@ -87,7 +108,7 @@ const PageNavbar = () => {
             color="primary"
             href="#contact"
             variant="flat"
-            className="uppercase lg:hidden rounded-none"
+            className="uppercase rounded-none"
           >
             Get in touch
           </Button>
