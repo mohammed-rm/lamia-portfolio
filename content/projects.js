@@ -1,4 +1,4 @@
-import testImage from "public/projet.png";
+import testImage from "@/public/projet.png";
 
 export const projectsInfo = [
   {

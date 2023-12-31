@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import heroImage from "../public/hero-image.png";
+import heroImage from "@/public/hero-image.png";
 import { Button, Link } from "@nextui-org/react";
 import { heroInfo } from "@/content/hero";
 

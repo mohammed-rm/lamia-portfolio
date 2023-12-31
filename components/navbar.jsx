@@ -13,7 +13,7 @@ import {
 } from "@nextui-org/react";
 
 import Image from "next/image";
-import logo from "public/logo.png";
+import logo from "@/public/logo.png";
 import { menuItems } from "@/content/navbar";
 
 const PageNavbar = () => {
