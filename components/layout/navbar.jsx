@@ -36,9 +36,9 @@ const PageNavbar = () => {
       <NavbarContent className="lg:hidden">
         <NavbarMenu>
           <>
-            {menuItems.map((item, index) => {
-              const itemKey = Object.keys(item)[0];
-              const title = Object.values(item)[0].navbarTitle;
+            {Object.keys(menuItems).map((key, index) => {
+              const itemKey = key;
+              const title = menuItems[key].navbarTitle;
               return (
                 <NavbarMenuItem key={index} className="font-serif">
                   <Link
@@ -75,9 +75,9 @@ const PageNavbar = () => {
       {/* Desktop Menu Items */}
       <NavbarContent className="hidden lg:flex gap-8" justify="center">
         <>
-          {menuItems.map((item, index) => {
-            const itemKey = Object.keys(item)[0];
-            const title = Object.values(item)[0].navbarTitle;
+          {Object.keys(menuItems).map((key, index) => {
+            const itemKey = key;
+            const title = menuItems[key].navbarTitle;
             return (
               <NavbarItem key={index}>
                 <Link
