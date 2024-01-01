@@ -1,9 +1,8 @@
 import About from "@/sections/about";
-import Contact from "@/sections/contact";
 import Hero from "@/sections/hero";
-import PageNavbar from "@/components/navbar";
+import PageNavbar from "@/components/layout/navbar";
 import { Toaster } from "sonner";
-import ScrollUp from "@/components/scroll-up";
+import ScrollUp from "@/components/ui/scroll-up";
 
 export default function Home() {
   return (
@@ -19,7 +18,7 @@ export default function Home() {
       {/*<Experience />*/}
       {/*<Skills />*/}
       {/*<Projects />*/}
-      <Contact />
+      {/*<Contact />*/}
     </main>
   );
 }

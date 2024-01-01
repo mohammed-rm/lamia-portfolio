@@ -1,7 +1,6 @@
 "use client";
 import React, { useState } from "react";
 import {
-  Button,
   Link,
   Navbar,
   NavbarBrand,
@@ -14,6 +13,7 @@ import {
 import Image from "next/image";
 import logo from "@/public/logo.png";
 import { menuItems } from "@/content/navbar";
+import { ContactForm } from "@/components/contact/contact-form";
 
 const PageNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
@@ -103,15 +103,7 @@ const PageNavbar = () => {
       {/* CTA Button */}
       <NavbarContent justify="end">
         <NavbarItem>
-          <Button
-            as={Link}
-            color="primary"
-            href="#contact"
-            variant="flat"
-            className="uppercase rounded-none"
-          >
-            Get in touch
-          </Button>
+          <ContactForm />
         </NavbarItem>
       </NavbarContent>
     </Navbar>
