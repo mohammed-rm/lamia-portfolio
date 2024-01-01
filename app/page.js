@@ -3,6 +3,11 @@ import Hero from "@/sections/hero";
 import PageNavbar from "@/components/layout/navbar";
 import { Toaster } from "sonner";
 import ScrollUp from "@/components/ui/scroll-up";
+import Projects from "@/sections/projects";
+import Certificates from "@/sections/certificates";
+import Badges from "@/sections/badges";
+import Blog from "@/sections/blog";
+import Volunteering from "@/sections/volunteering";
 
 export default function Home() {
   return (
@@ -15,10 +20,11 @@ export default function Home() {
       <ScrollUp />
       <Hero />
       <About />
-      {/*<Experience />*/}
-      {/*<Skills />*/}
-      {/*<Projects />*/}
-      {/*<Contact />*/}
+      <Projects />
+      <Certificates />
+      <Badges />
+      <Blog />
+      <Volunteering />
     </main>
   );
 }
