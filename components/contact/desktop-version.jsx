@@ -45,8 +45,9 @@ const DesktopVersion = ({
           body: "py-6",
           backdrop: "bg-[#292f46]/60 backdrop-opacity-40",
           base: "border-[#292f46] bg-blue-100 text-[#a8b0d3] rounded-md",
+          closeButton:
+            "text-primary hover:border-2 hover:border-primary hover:bg-opacity-0",
         }}
-        hideCloseButton
       >
         <ModalContent>
           {(onClose) => (
