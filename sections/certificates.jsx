@@ -9,10 +9,7 @@ const Certificates = () => {
     <section id="certificates" className="section">
       <p className="section-title">{menuItems.certificates.navbarTitle}</p>
       <div className="mt-44 w-full md:ml-20 md:mr-20 flex flex-wrap justify-center items-center">
-        {/*Mobile*/}
         <MobileVersion certificates={certificates} />
-
-        {/*  Desktop*/}
         <DesktopVersion certificates={certificates} />
       </div>
     </section>
