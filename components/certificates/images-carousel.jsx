@@ -13,7 +13,7 @@ import ImageCard from "@/components/certificates/image-card";
 
 export function ImagesCarousel({ images }) {
   const [api, setApi] = React.useState();
-  const [current, setCurrent] = React.useState(images.length);
+  const [current, setCurrent] = React.useState(0);
 
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true }),
