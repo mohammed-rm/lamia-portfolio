@@ -1,24 +1,27 @@
-import icon from "@/public/logo.png";
 import {
   agile,
   arduino,
   cascade,
   cpp,
+  data,
   essentials,
   fullstack,
   git,
+  it,
   marketing,
   maths,
   michigan,
   mvc,
   nsi,
+  project,
   python,
+  skills,
 } from "@/public/certificates";
 
 export const certificates = {
   1: {
     category: "Mes certificats en data",
-    icon: icon,
+    icon: data,
     image: {
       1: {
         title: "Duis aute irure dolor in reprehenderit in voluptate",
@@ -40,7 +43,7 @@ export const certificates = {
   },
   2: {
     category: "Mes certificats en gestion de projet",
-    icon: icon,
+    icon: project,
     image: {
       1: {
         title: "Duis aute irure dolor in reprehenderit in voluptate",
@@ -58,7 +61,7 @@ export const certificates = {
   },
   3: {
     category: "Mes certificats en soft skills",
-    icon: icon,
+    icon: skills,
     image: {
       1: {
         title: "Duis aute irure dolor in reprehenderit in voluptate",
@@ -76,7 +79,7 @@ export const certificates = {
   },
   4: {
     category: "Mes certificats en informatique générale",
-    icon: icon,
+    icon: it,
     image: {
       1: {
         title: "Duis aute irure dolor in reprehenderit in voluptate",

@@ -11,6 +11,10 @@ import michigan from "@/public/certificates/michigan.png";
 import mvc from "@/public/certificates/mvc.png";
 import nsi from "@/public/certificates/nsi.png";
 import python from "@/public/certificates/python.png";
+import data from "@/public/certificates/data.png";
+import it from "@/public/certificates/it.png";
+import project from "@/public/certificates/project-management.png";
+import skills from "@/public/certificates/soft-skills.png";
 
 export {
   agile,
@@ -26,4 +30,8 @@ export {
   mvc,
   nsi,
   python,
+  data,
+  it,
+  skills,
+  project,
 };
