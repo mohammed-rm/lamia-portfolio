@@ -13,7 +13,7 @@ export default function Home() {
   return (
     <main
       className="bg-[#f5fdf2] bg-cover bg-no-repeat overflow-y-scroll overflow-x-hidden lg:scrollbar
-        scrollbar-track-gray-400/20 scrollbar-thumb-primary snap-y snap-mandatory h-screen scroll-smooth"
+        scrollbar-track-gray-400/20 scrollbar-thumb-primary h-screen scroll-smooth"
     >
       <Toaster richColors position="top-right" />
       <PageNavbar />
