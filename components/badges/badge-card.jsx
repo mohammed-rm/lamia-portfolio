@@ -36,7 +36,7 @@ const BadgeCard = ({ title, keywords, badgeIcon, link }) => {
 
         <Divider />
         <CardFooter className="flex justify-end h-auto p-4">
-          <Link isExternal href={link} target={"_blank"}>
+          <Link href={link} target={"_blank"}>
             <Button
               className="rounded-[8px] text-primary tracking-wide text-medium"
               color="secondary"

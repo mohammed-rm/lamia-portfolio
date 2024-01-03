@@ -12,11 +12,11 @@ const Blog = () => {
         <p className="md:text-center md:text-xl lg:text-2xl tracking-wide">
           {blog.text}
         </p>
-        <Link isExternal href={blog.link} className="lg:w-[30%]">
+        <Link href={blog.link} target={"_blank"}>
           <Button
-            className="rounded-none text-primary tracking-wider text-large w-full hover:bg-accent hover:text-black"
+            className="rounded-[8px] text-primary tracking-wide text-medium"
             color="secondary"
-            variant="flat"
+            variant="ghost"
           >
             Continuer la lecture
             <RxExternalLink />
