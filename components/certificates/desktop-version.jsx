@@ -15,7 +15,7 @@ const DesktopVersion = ({ certificates }) => {
             <div
               onClick={() => setSelectedCertificate(index)}
               key={index}
-              className={`flex flex-row gap-4 transition-all duration-200 ease-in-out ${
+              className={`flex flex-row gap-4 transition-all duration-200 ease-in-out hover:cursor-pointer ${
                 selectedCertificate === index
                   ? "opacity-100"
                   : "opacity-20 hover:scale-105 xl:hover:scale-125"

@@ -17,7 +17,7 @@ import {
 
 export const certificates = {
   1: {
-    category: "Data",
+    category: "Mes certificats en data",
     icon: icon,
     image: {
       1: {
@@ -39,7 +39,7 @@ export const certificates = {
     },
   },
   2: {
-    category: "Gestion de projet",
+    category: "Mes certificats en gestion de projet",
     icon: icon,
     image: {
       1: {
@@ -57,7 +57,7 @@ export const certificates = {
     },
   },
   3: {
-    category: "Soft skills",
+    category: "Mes certificats en soft skills",
     icon: icon,
     image: {
       1: {
@@ -75,7 +75,7 @@ export const certificates = {
     },
   },
   4: {
-    category: "Informatique générale",
+    category: "Mes certificats en informatique générale",
     icon: icon,
     image: {
       1: {
