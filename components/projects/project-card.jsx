@@ -5,10 +5,10 @@ const ProjectCard = ({ title, keywords }) => {
   return (
     <Card
       radius="sm"
-      className="max-w-[300px] h-[300px] bg-gradient-to-br from-transparent via-green-100 to-transparent bg-opacity-0 rounded-br-[80px]"
+      className="max-w-[400px] h-auto bg-gradient-to-br from-transparent via-green-100 to-transparent bg-opacity-0"
       shadow
     >
-      <CardBody className="mt-12 px-6 space-y-6 scrollbar-thin scrollbar-thumb-green-200 scrollbar-track-secondary-100">
+      <CardBody className="space-y-6 scrollbar-thin scrollbar-thumb-green-200 scrollbar-track-secondary-100">
         <p className="text-lg font-playpen">{title}</p>
         <span className="text-medium flex flex-wrap gap-2">
           {keywords.map((keyword, index) => (

@@ -8,9 +8,9 @@ const ProjectCategory = ({ title, subCategories }) => {
       <p className="text-2xl font-playpen">{title}</p>
       <ul className="list-disc">
         {Object.values(subCategories).map((subCategory, index) => (
-          <li key={index} className="text-xl font-playpen mt-6 ml-12">
+          <li key={index} className="text-xl font-playpen mt-6 md:ml-12">
             {subCategory.title}
-            <div className="flex flex-wrap justify-center items-center gap-4 mt-6">
+            <div className="flex flex-wrap justify-center items-center gap-4 mt-6 -ml-6">
               {subCategory.projects.map((project, index) => (
                 <ProjectCard
                   key={index}
