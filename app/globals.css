@@ -6,7 +6,7 @@
 
 @layer components {
     .section {
-        @apply min-h-screen snap-start relative flex justify-center items-start;
+        @apply relative flex justify-center items-start;
     }
 
     .section-title {
