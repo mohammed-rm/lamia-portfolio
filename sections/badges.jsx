@@ -5,10 +5,10 @@ import BadgeCard from "@/components/badges/badge-card";
 
 const Badges = () => {
   return (
-    <section id="badges" className="section">
+    <section id="badges" className="section relative">
       <p className="section-title">{menuItems.badges.navbarTitle}</p>
 
-      <div className="mt-56 w-full container mx-auto md:ml-20 md:mr-20 flex flex-wrap justify-center gap-12">
+      <div className="mt-56 w-full container mx-auto md:ml-20 md:mr-20 flex flex-wrap justify-center gap-12 z-10">
         {Object.values(badges).map((badge, index) => (
           <BadgeCard
             key={index}
@@ -19,6 +19,8 @@ const Badges = () => {
           />
         ))}
       </div>
+      <span className="absolute star top-24 right-10 sm:right-32 bg-primary bg-opacity-20 h-14 w-14 animate-spin-slow transition-all" />
+      <span className="absolute star top-24 left-10 sm:left-32 bg-primary bg-opacity-20 h-14 w-14 animate-spin-slow transition-all" />
     </section>
   );
 };

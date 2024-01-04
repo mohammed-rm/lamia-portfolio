@@ -13,6 +13,10 @@
         @apply absolute top-24 uppercase text-xl sm:text-2xl md:text-4xl font-playpen font-bold text-center;
     }
 
+    .section-container {
+        @apply
+    }
+
     .purple-gradient {
         @apply bg-gradient-to-l from-yellow-500 via-purple-500 to-blue-500 text-transparent bg-clip-text;
     }
@@ -20,4 +24,20 @@
     .cards-style {
         @apply border-[1px] border-primary font-serif;
     }
+
+    .box {
+        --mask: radial-gradient(40.25px at 50% 54.00px, #000 99%, #0000 101%) calc(50% - 36px) 0/72px 51% repeat-x,
+        radial-gradient(40.25px at 50% -36px, #0000 99%, #000 101%) 50% 18px/72px calc(51% - 18px) repeat-x,
+        radial-gradient(40.25px at 50% calc(100% - 54.00px), #000 99%, #0000 101%) calc(50% - 36px) 100%/72px 51% repeat-x,
+        radial-gradient(40.25px at 50% calc(100% + 36.00px), #0000 99%, #000 101%) 50% calc(100% - 18px)/72px calc(51% - 18px) repeat-x;
+        -webkit-mask: var(--mask);
+        mask: var(--mask);
+    }
+
+    .star {
+        width: 200px;
+        aspect-ratio: 1;
+        clip-path: polygon(94.11% 73.54%, 66.17% 83.28%, 41.25% 99.23%, 23.35% 75.67%, 0.48% 56.89%, 17.36% 32.58%, 28.14% 5.03%, 56.48% 13.57%, 86.02% 15.32%, 86.65% 44.90%);
+    }
+
 }

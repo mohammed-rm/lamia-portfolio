@@ -17,7 +17,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body
-        className={`${inter.className} bg-[#f5fdf2] bg-cover bg-no-repeat flex flex-col overflow-x-hidden overflow-y-scroll 
+        className={`${inter.className} bg-gray-100 bg-cover bg-no-repeat flex flex-col overflow-x-hidden overflow-y-scroll 
         lg:scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-500`}
       >
         <Providers>
