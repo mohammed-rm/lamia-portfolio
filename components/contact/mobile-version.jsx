@@ -30,7 +30,7 @@ const MobileVersion = ({
         </Button>
       </DrawerTrigger>
       <DrawerContent>
-        <div className="w-full mt-44 container mx-auto">
+        <div className="w-full container mx-auto">
           <form
             id="submit-form"
             className="container mx-auto max-w-xl p-4 space-y-5 font-serif"
@@ -44,6 +44,7 @@ const MobileVersion = ({
             }}
           >
             <Input
+              className="shadow-2xl"
               radius="none"
               isRequired
               name="name"
@@ -52,9 +53,10 @@ const MobileVersion = ({
               placeholder={nameInput.placeholder}
               variant="flat"
               color="default"
-              classNames={{ label: "text-lg" }}
+              classNames={{ label: "text-lg", base: "bg-white" }}
             />
             <Input
+              className="shadow-2xl"
               radius="none"
               isRequired
               name="email"
@@ -63,9 +65,10 @@ const MobileVersion = ({
               placeholder={emailInput.placeholder}
               variant="flat"
               color="default"
-              classNames={{ label: "text-lg" }}
+              classNames={{ label: "text-lg", base: "bg-white" }}
             />
             <Textarea
+              className="shadow-2xl"
               radius="none"
               isRequired
               name="message"
@@ -73,7 +76,7 @@ const MobileVersion = ({
               placeholder={messageInput.placeholder}
               variant="flat"
               color="default"
-              classNames={{ label: "text-lg" }}
+              classNames={{ label: "text-lg", base: "bg-white" }}
             />
             <SubmitButton label={submitButton} />
           </form>
