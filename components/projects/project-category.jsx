@@ -4,7 +4,7 @@ import ProjectCard from "@/components/projects/project-card";
 const ProjectCategory = ({ title, subCategories }) => {
   return (
     <div className="w-full h-auto relative p-8">
-      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-300 opacity-30 rounded-large rounded-br-[100px]" />
+      <div className="absolute inset-0 bg-gradient-to-br from-transparent to-blue-200 opacity-20 rounded-large rounded-br-[100px]" />
       <p className="text-2xl">{title}</p>
       <ul className="list-disc">
         {Object.values(subCategories).map((subCategory, index) => (
