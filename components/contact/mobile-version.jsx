@@ -51,7 +51,7 @@ const MobileVersion = ({
               label={nameInput.label}
               placeholder={nameInput.placeholder}
               variant="flat"
-              color="primary"
+              color="default"
               classNames={{ label: "text-lg" }}
             />
             <Input
@@ -62,7 +62,7 @@ const MobileVersion = ({
               label={emailInput.label}
               placeholder={emailInput.placeholder}
               variant="flat"
-              color="primary"
+              color="default"
               classNames={{ label: "text-lg" }}
             />
             <Textarea
@@ -72,7 +72,7 @@ const MobileVersion = ({
               label={messageInput.label}
               placeholder={messageInput.placeholder}
               variant="flat"
-              color="primary"
+              color="default"
               classNames={{ label: "text-lg" }}
             />
             <SubmitButton label={submitButton} />
