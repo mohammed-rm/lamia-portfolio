@@ -14,7 +14,7 @@ const MobileVersion = ({ certificates }) => {
           <AccordionItem
             className="group-[.is-splitted]:bg-blue-50 group-[.is-splitted]:rounded-sm mb-6 group-[.is-splitted]:overflow-hidden"
             classNames={{
-              title: "text-primary font-playpen text-xl",
+              title: "text-primary text-xl",
             }}
             indicator={<GoPlus className="text-secondary h-6 w-6" />}
             title={`${index + 1}. ${certificate.category}`}

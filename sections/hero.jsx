@@ -15,7 +15,7 @@ const Hero = () => {
               <span className="purple-gradient">{heroInfo.role}</span>
             </p>
           </span>
-          <p className="p-6 text-center font-serif md:text-2xl tracking-wide md:tracking-widest lg:text-start lg:p-0">
+          <p className="p-6 text-center md:text-2xl tracking-wide md:tracking-widest lg:text-start lg:p-0">
             {heroInfo.description}
           </p>
         </div>

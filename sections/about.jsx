@@ -7,7 +7,7 @@ const About = () => {
   const renderedText = useColoredTextRenderer(
     aboutParagraph.text,
     aboutParagraph.coloredPhrases,
-    "text-primary font-playpen font-semibold",
+    "text-primary",
   );
 
   return (

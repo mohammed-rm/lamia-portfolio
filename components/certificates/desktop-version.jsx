@@ -33,7 +33,7 @@ const DesktopVersion = ({ certificates }) => {
                 />
               </Card>
               <Card className="h-auto bg-gray-200 w-[250px] flex items-start justify-center rounded-sm">
-                <p className="ml-4 text-large font-playpen">
+                <p className="ml-4 text-large">
                   {index + 1}. {certificate.category}
                 </p>
               </Card>

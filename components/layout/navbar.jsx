@@ -40,7 +40,7 @@ const PageNavbar = () => {
               const itemKey = key;
               const title = menuItems[key].navbarTitle;
               return (
-                <NavbarMenuItem key={index} className="font-serif">
+                <NavbarMenuItem key={index} className="font-playpen">
                   <Link
                     className={`w-full text-xl ${
                       itemKey === sectionItem
