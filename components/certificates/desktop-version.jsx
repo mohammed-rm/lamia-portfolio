@@ -6,8 +6,10 @@ import { ImagesCarousel } from "@/components/certificates/images-carousel";
 
 const DesktopVersion = ({ certificates }) => {
   const [selectedCertificate, setSelectedCertificate] = React.useState(0);
+  const sliderPosition = selectedCertificate * 75 + "px";
+
   return (
-    <div className="hidden container mx-auto lg:flex flex-row justify-evenly items-center w-full p-6 gap-12 mt-8">
+    <div className="hidden container mx-auto lg:flex flex-row justify-evenly items-center w-full p-6 gap-12 mt-8 mb-10">
       {/*Names*/}
       <div className="flex flex-row w-[50%] justify-evenly h-full gap-4">
         <div className="flex flex-col items-start justify-center gap-6">
@@ -41,11 +43,14 @@ const DesktopVersion = ({ certificates }) => {
           ))}
         </div>
         <div className="flex bg-gray-200 w-1">
-          <span className="w-1 h-[25%] bg-primary" />
+          <span
+            className="w-1 h-[25%] bg-primary transition-all duration-300 transform"
+            style={{ transform: `translateY(${sliderPosition})` }}
+          />
         </div>
       </div>
       {/*Images*/}
-      <div className="w-[50%]">
+      <div className="w-[50%] h-[420px]">
         <ImagesCarousel images={certificates[selectedCertificate + 1].image} />
       </div>
     </div>
