@@ -6,7 +6,7 @@ import { GoDotFill, GoPlus } from "react-icons/go";
 
 const ProjectCategory = ({ title, subCategories }) => {
   return (
-    <div className="w-full h-auto relative p-8 flex flex-col space-y-12 bg-gradient-to-br from-transparent via-transparent to-slate-200 rounded-sm rounded-br-[50px]">
+    <div className="w-full h-auto relative p-2 flex flex-col space-y-20 bg-gradient-to-br from-transparent via-transparent to-slate-200 rounded-sm rounded-br-[50px]">
       <p className="text-sm md:text-large lg:text-xl ribbon h-auto font-semibold text-purple-800">
         {title}
       </p>
