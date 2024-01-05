@@ -1,7 +1,9 @@
 import React from "react";
-import { Card, CardBody, Chip } from "@nextui-org/react";
+import { Button, Card, CardBody, CardFooter, Chip } from "@nextui-org/react";
+import Link from "next/link";
+import { RxExternalLink } from "react-icons/rx";
 
-const ProjectCard = ({ title, keywords }) => {
+const ProjectCard = ({ title, keywords, link }) => {
   return (
     <Card
       radius="sm"
@@ -18,6 +20,18 @@ const ProjectCard = ({ title, keywords }) => {
           ))}
         </span>
       </CardBody>
+      <CardFooter className="flex justify-end h-auto p-4">
+        <Link href={link} target={"_blank"}>
+          <Button
+            className="rounded-[8px] text-primary tracking-wide text-medium font-playpen"
+            color="secondary"
+            variant="ghost"
+          >
+            Code source
+            <RxExternalLink />
+          </Button>
+        </Link>
+      </CardFooter>
     </Card>
   );
 };

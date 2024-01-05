@@ -9,21 +9,25 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },
@@ -39,11 +43,13 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },
@@ -54,6 +60,7 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },
@@ -64,21 +71,25 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },
@@ -94,6 +105,7 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },
@@ -104,11 +116,13 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },
@@ -119,31 +133,37 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },
@@ -154,16 +174,19 @@ export const projects = {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
             keywords: ["key1", "key2", "key3", "key4"],
+            link: "https://google.com",
           },
         ],
       },

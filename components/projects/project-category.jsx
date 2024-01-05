@@ -16,6 +16,7 @@ const ProjectCategory = ({ title, subCategories }) => {
                   key={index}
                   title={project.title}
                   keywords={project.keywords}
+                  link={project.link}
                 />
               ))}
             </div>
