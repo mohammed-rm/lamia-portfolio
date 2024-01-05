@@ -8,7 +8,7 @@ export const projects = {
           {
             title:
               "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore",
-            keywords: ["key1", "key2", "key3", "key4"],
+            keywords: ["key1", "key2", "key3", "key4", "key5", "key6"],
             link: "https://google.com",
           },
           {

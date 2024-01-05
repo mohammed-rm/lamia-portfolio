@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectCard from "@/components/projects/project-card";
 
 const ProjectCategory = ({ title, subCategories }) => {
   return (
@@ -10,16 +9,16 @@ const ProjectCategory = ({ title, subCategories }) => {
         {Object.values(subCategories).map((subCategory, index) => (
           <li key={index} className="text-xl mt-10 md:ml-12">
             {subCategory.title}
-            <div className="flex flex-wrap justify-center items-center gap-4 mt-6 -ml-6">
-              {subCategory.projects.map((project, index) => (
-                <ProjectCard
-                  key={index}
-                  title={project.title}
-                  keywords={project.keywords}
-                  link={project.link}
-                />
-              ))}
-            </div>
+            {/*<div className="flex flex-wrap justify-center items-center gap-4 mt-6 -ml-6">*/}
+            {/*  {subCategory.projects.map((project, index) => (*/}
+            {/*    <ProjectCard*/}
+            {/*      key={index}*/}
+            {/*      title={project.title}*/}
+            {/*      keywords={project.keywords}*/}
+            {/*      link={project.link}*/}
+            {/*    />*/}
+            {/*  ))}*/}
+            {/*</div>*/}
           </li>
         ))}
       </ul>
