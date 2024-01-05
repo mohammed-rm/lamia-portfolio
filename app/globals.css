@@ -50,7 +50,7 @@
         left: calc(-1 * var(--f));
         padding-inline: 2em;
         line-height: 1.8;
-        background-color: #ffccbc;
+        background-color: #e3dbf5;
         border-bottom-width: var(--f);
         border-bottom-color: #0005;
         border-right-width: var(--r);

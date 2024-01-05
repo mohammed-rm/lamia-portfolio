@@ -7,8 +7,7 @@ const ProjectCard = ({ title, keywords, link }) => {
   return (
     <Card
       radius="sm"
-      className="max-w-[400px] h-auto bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-white via-blue-100 to-pink-100"
-      shadow
+      className="max-w-[400px] h-auto bg-[conic-gradient(at_top_right,_var(--tw-gradient-stops))] from-white via-blue-100 to-pink-100 shadow-none shadow-sm"
     >
       <CardBody className="space-y-6 scrollbar-thin scrollbar-thumb-green-200 scrollbar-track-secondary-100">
         <p className="text-lg font-playpen">{title}</p>
