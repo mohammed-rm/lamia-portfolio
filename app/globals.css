@@ -41,7 +41,6 @@
     }
 
     .ribbon {
-        /* Equivalent to font-size: 28px; font-weight: bold; color: #fff; */
 
         --f: .5em; /* Control the folded part */
         --r: .8em; /* Control the ribbon shape */
