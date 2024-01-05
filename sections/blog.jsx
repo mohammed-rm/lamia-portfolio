@@ -14,9 +14,9 @@ const Blog = () => {
         </p>
         <Link href={blog.link} target={"_blank"}>
           <Button
-            className="rounded-[8px] text-primary tracking-wide text-medium mb-10"
-            color="secondary"
-            variant="ghost"
+            className="rounded-[4px] text-primary tracking-wide text-medium mb-10"
+            color="primary"
+            variant="bordered"
           >
             Continuer la lecture
             <RxExternalLink />
