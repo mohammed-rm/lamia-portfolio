@@ -40,4 +40,24 @@
         clip-path: polygon(94.11% 73.54%, 66.17% 83.28%, 41.25% 99.23%, 23.35% 75.67%, 0.48% 56.89%, 17.36% 32.58%, 28.14% 5.03%, 56.48% 13.57%, 86.02% 15.32%, 86.65% 44.90%);
     }
 
+    .ribbon {
+        @apply text-black font-bold text-lg font-playpen;
+        /* Equivalent to font-size: 28px; font-weight: bold; color: #fff; */
+
+        --f: .5em; /* Control the folded part */
+        --r: .8em; /* Control the ribbon shape */
+
+        position: absolute;
+        top: 20px;
+        left: calc(-1 * var(--f));
+        padding-inline: 2em;
+        line-height: 1.8;
+        background-color: #ffccbc;
+        border-bottom-width: var(--f);
+        border-bottom-color: #0005;
+        border-right-width: var(--r);
+        border-right-color: #0000;
+        clip-path: polygon(0 0, 0 calc(100% - var(--f)), var(--f) 100%, var(--f) calc(100% - var(--f)), 100% calc(100% - var(--f)), calc(100% - var(--r)) calc(50% - var(--f) / 2), 100% 0);
+    }
+
 }

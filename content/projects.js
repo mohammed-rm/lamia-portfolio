@@ -1,6 +1,6 @@
 export const projects = {
   1: {
-    category: "Casquette Data Analyste",
+    category: "Ma Casquette Data Analyste",
     subCategories: {
       1: {
         title: "Mes projets EDA",
@@ -34,7 +34,7 @@ export const projects = {
     },
   },
   2: {
-    category: "Casquette Data Scientist",
+    category: "Ma Casquette Data Scientist",
     subCategories: {
       1: {
         title: "Mes projets Machine Learning",
@@ -96,7 +96,7 @@ export const projects = {
     },
   },
   3: {
-    category: "Casquette Data Engineer",
+    category: "Ma Casquette Data Engineer",
     subCategories: {
       1: {
         title: "Mes projets Deploiement",
