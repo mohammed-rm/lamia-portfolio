@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { aboutParagraph } from "@/content/about";
 import { menuItems } from "@/content/navbar";
@@ -6,8 +7,10 @@ import { socials } from "@/content/socials";
 import Image from "next/image";
 import Link from "next/link";
 import { Card, CardFooter } from "@nextui-org/react";
+import { useSectionInView } from "@/hooks/active-section-context";
 
 const About = () => {
+  const { ref } = useSectionInView(menuItems.about.id);
   const renderedText = useColoredTextRenderer(
     aboutParagraph.text,
     aboutParagraph.coloredPhrases,
@@ -15,7 +18,7 @@ const About = () => {
   );
 
   return (
-    <section id="about" className="section">
+    <section id="about" className="section" ref={ref}>
       <Card className="flex flex-col justify-center items-center w-[90%] mt-8 bg-[conic-gradient(at_right,_var(--tw-gradient-stops))] from-neutral-400 via-indigo-50 to-rose-100">
         <p className="section-title">{menuItems.about.navbarTitle}</p>
         <div className="mt-44 container mx-auto md:ml-20 md:mr-20">

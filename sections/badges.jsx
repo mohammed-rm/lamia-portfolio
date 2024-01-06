@@ -1,11 +1,14 @@
+"use client";
 import React from "react";
 import { menuItems } from "@/content/navbar";
 import { badges } from "@/content/badges";
 import BadgeCard from "@/components/badges/badge-card";
+import { useSectionInView } from "@/hooks/active-section-context";
 
 const Badges = () => {
+  const { ref } = useSectionInView(menuItems.badges.id);
   return (
-    <section id="badges" className="section relative">
+    <section id="badges" className="section relative" ref={ref}>
       <p className="section-title">{menuItems.badges.navbarTitle}</p>
 
       <div className="mt-56 w-full container mx-auto md:ml-20 md:mr-20 flex flex-wrap justify-center gap-12 z-10">

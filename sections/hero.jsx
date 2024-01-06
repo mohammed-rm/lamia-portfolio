@@ -3,10 +3,12 @@ import React from "react";
 import Image from "next/image";
 import heroImage from "@/public/hero-image.png";
 import { heroInfo } from "@/content/hero";
+import { useSectionInView } from "@/hooks/active-section-context";
 
 const Hero = () => {
+  const { ref } = useSectionInView("hero");
   return (
-    <section id="hero" className="min-h-screen md:pt-20 bg-green-50">
+    <section id="hero" className="min-h-screen md:pt-20 bg-green-50" ref={ref}>
       <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:justify-evenly">
         <div className="mt-24 flex flex-col space-y-6 items-center lg:items-start lg:w-2/5">
           <span className="flex flex-col text-center lg:text-start text-4xl md:text-5xl lg:text-6xl font-bold">

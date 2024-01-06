@@ -5,6 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import Footer from "@/components/layout/footer";
 import { Toaster } from "sonner";
 import PageNavbar from "@/components/layout/navbar";
+import ActiveSectionContextProvider from "@/context/active-section-context";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,12 +22,14 @@ export default function RootLayout({ children }) {
         lg:scrollbar-thin scrollbar-thumb-primary scrollbar-track-gray-500`}
       >
         <Providers>
-          <Toaster richColors position="top-right" />
-          <div className="font-playpen">
-            <PageNavbar />
-            {children}
-          </div>
-          <Footer />
+          <ActiveSectionContextProvider>
+            <Toaster richColors position="top-right" />
+            <div className="font-playpen">
+              <PageNavbar />
+              {children}
+            </div>
+            <Footer />
+          </ActiveSectionContextProvider>
         </Providers>
         <Analytics />
       </body>

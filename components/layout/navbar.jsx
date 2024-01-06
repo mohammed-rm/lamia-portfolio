@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React from "react";
 import {
   Link,
   Navbar,
@@ -14,10 +14,12 @@ import Image from "next/image";
 import logo from "@/public/logo.png";
 import { menuItems } from "@/content/navbar";
 import { ContactForm } from "@/components/contact/contact-form";
+import { useActiveSectionContext } from "@/context/active-section-context";
 
 const PageNavbar = () => {
   const [isMenuOpen, setIsMenuOpen] = React.useState(false);
-  const [sectionItem, setSectionItem] = useState("");
+  const { activeSection, setActiveSection, setTimeOfLastClick } =
+    useActiveSectionContext();
 
   return (
     <Navbar
@@ -43,7 +45,7 @@ const PageNavbar = () => {
                 <NavbarMenuItem key={index} className="font-playpen">
                   <Link
                     className={`w-full text-xl ${
-                      itemKey === sectionItem
+                      itemKey === activeSection
                         ? "text-primary font-semibold"
                         : "text-default"
                     }`}
@@ -51,7 +53,8 @@ const PageNavbar = () => {
                     size="lg"
                     onClick={() => {
                       setIsMenuOpen(false);
-                      setSectionItem(itemKey);
+                      setActiveSection(itemKey);
+                      setTimeOfLastClick(Date.now());
                     }}
                   >
                     {title}
@@ -82,13 +85,15 @@ const PageNavbar = () => {
               <NavbarItem key={index}>
                 <Link
                   className={`text-large relative group ${
-                    itemKey === sectionItem
+                    itemKey === activeSection
                       ? "text-primary font-semibold"
                       : "text-default"
                   }`}
                   href={`#${itemKey}`}
-                  onClick={() => setSectionItem(itemKey)}
-                  color={itemKey === sectionItem ? "secondary" : "foreground"}
+                  onClick={() => {
+                    setActiveSection(itemKey);
+                    setTimeOfLastClick(Date.now());
+                  }}
                 >
                   <span>{title}</span>
                   {/* Underline effect on hover */}
