@@ -2,10 +2,9 @@
 import React from "react";
 import { menuItems } from "@/content/navbar";
 import ProjectCategory from "@/components/projects/project-category";
-import { projects } from "@/content/projects";
 import { useSectionInView } from "@/hooks/active-section-context";
 
-const Projects = () => {
+const Projects = ({ projects }) => {
   const { ref } = useSectionInView(menuItems.projects.id);
   return (
     <section id="projects" className="section" ref={ref}>
