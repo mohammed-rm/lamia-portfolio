@@ -1,7 +1,6 @@
 import Hero from "@/sections/hero";
 import ScrollUp from "@/components/ui/scroll-up";
 import Projects from "@/sections/projects";
-import Certificates from "@/sections/certificates";
 import Badges from "@/sections/badges";
 import Blog from "@/sections/blog";
 import Volunteering from "@/sections/volunteering";
@@ -13,6 +12,8 @@ import { getSocials } from "@/fetch-content/getSocials";
 import About from "@/sections/about";
 import { getBadges } from "@/fetch-content/getBadges";
 import { getProjects } from "@/fetch-content/getProjects";
+import { getCertificates } from "@/fetch-content/getCertificates";
+import Certificates from "@/sections/certificates";
 
 export const revalidate = 10;
 
@@ -24,7 +25,7 @@ export default async function Home() {
   const socialsData = await getSocials();
   const projectsData = await getProjects();
   const badgesData = await getBadges();
-  // const certificatesData = await getCertificates();
+  const certificatesData = await getCertificates();
 
   return (
     <main>
@@ -32,7 +33,7 @@ export default async function Home() {
       <Hero heroInfo={heroData} />
       <About aboutParagraph={aboutData} socials={socialsData} />
       <Projects projects={projectsData} />
-      <Certificates />
+      <Certificates certificates={certificatesData} />
       <Badges badges={badgesData} />
       <Blog blog={blogData} />
       <Volunteering volunteering={volunteeringData} />

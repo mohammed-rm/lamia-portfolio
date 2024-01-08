@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import { Accordion, AccordionItem, Card } from "@nextui-org/react";
-import { ImagesCarousel } from "@/components/certificates/images-carousel";
 
 import Image from "next/image";
 import { GoPlus } from "react-icons/go";
+import { urlFor } from "@/lib/sanity";
+import { ImagesCarousel } from "@/components/certificates/images-carousel";
 
 const MobileVersion = ({ certificates }) => {
   return (
@@ -27,14 +28,16 @@ const MobileVersion = ({ certificates }) => {
                 isBlurred
               >
                 <Image
-                  src={certificate.icon}
+                  src={urlFor(certificate.icon).url()}
                   alt="Icon"
+                  width={1000}
+                  height={1000}
                   className="w-16 h-16"
                 />
               </Card>
             }
           >
-            <ImagesCarousel images={certificates[index + 1].image} />
+            <ImagesCarousel images={certificates[index].images} />
           </AccordionItem>
         ))}
       </Accordion>

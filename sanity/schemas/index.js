@@ -5,7 +5,7 @@ import blog from './blog'
 import socials from './socials'
 import badges from './badges'
 import {projectDetail, projects, subCategory} from './projects'
-// import certificates from './certificates'
+import certificates from './certificates'
 
 export const schemaTypes = [
   hero,
@@ -17,4 +17,5 @@ export const schemaTypes = [
   projects,
   subCategory,
   projectDetail,
+  certificates,
 ]

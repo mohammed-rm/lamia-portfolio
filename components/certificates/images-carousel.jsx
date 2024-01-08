@@ -39,7 +39,7 @@ export function ImagesCarousel({ images }) {
         setApi={setApi}
       >
         <CarouselContent>
-          {Object.values(images).map((image, index) => (
+          {images.map((image, index) => (
             <CarouselItem key={index}>
               <ImageCard image={image.src} />
             </CarouselItem>

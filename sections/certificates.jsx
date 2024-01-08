@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
 import { menuItems } from "@/content/navbar";
-import { certificates } from "@/content/certificates";
 import DesktopVersion from "@/components/certificates/desktop-version";
 import MobileVersion from "@/components/certificates/mobile-version";
 import { useSectionInView } from "@/hooks/active-section-context";
 
-const Certificates = () => {
+const Certificates = ({ certificates }) => {
   const { ref } = useSectionInView(menuItems.certificates.id);
   return (
     <section id="certificates" className="section" ref={ref}>

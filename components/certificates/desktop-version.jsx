@@ -3,6 +3,7 @@ import React from "react";
 import { Card } from "@nextui-org/react";
 import Image from "next/image";
 import { ImagesCarousel } from "@/components/certificates/images-carousel";
+import { urlFor } from "@/lib/sanity";
 
 const DesktopVersion = ({ certificates }) => {
   const [selectedCertificate, setSelectedCertificate] = React.useState(0);
@@ -29,8 +30,10 @@ const DesktopVersion = ({ certificates }) => {
                 isBlurred
               >
                 <Image
-                  src={certificate.icon}
+                  src={urlFor(certificate.icon).url()}
                   alt="Icon"
+                  width={1000}
+                  height={1000}
                   className="w-16 h-16"
                 />
               </Card>
@@ -51,7 +54,7 @@ const DesktopVersion = ({ certificates }) => {
       </div>
       {/*Images*/}
       <div className="w-[50%] h-[420px]">
-        <ImagesCarousel images={certificates[selectedCertificate + 1].image} />
+        <ImagesCarousel images={certificates[selectedCertificate].images} />
       </div>
     </div>
   );
