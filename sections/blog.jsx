@@ -1,12 +1,11 @@
 "use client";
 import React from "react";
 import { menuItems } from "@/content/navbar";
-import { blog } from "@/content/blog";
 import { Button, Link } from "@nextui-org/react";
 import { RxExternalLink } from "react-icons/rx";
 import { useSectionInView } from "@/hooks/active-section-context";
 
-const Blog = () => {
+const Blog = ({ blog }) => {
   const { ref } = useSectionInView(menuItems.blog.id);
   return (
     <section

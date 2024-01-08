@@ -2,13 +2,13 @@
 import React from "react";
 import { menuItems } from "@/content/navbar";
 import useColoredTextRenderer from "@/hooks/colored-phrases";
-import { socials } from "@/content/socials";
-import Image from "next/image";
 import Link from "next/link";
+import Image from "next/image";
 import { Card, CardFooter } from "@nextui-org/react";
 import { useSectionInView } from "@/hooks/active-section-context";
+import { urlFor } from "@/lib/sanity";
 
-const About = ({ aboutParagraph }) => {
+const About = ({ aboutParagraph, socials }) => {
   const { ref } = useSectionInView(menuItems.about.id);
   const renderedText = useColoredTextRenderer(
     aboutParagraph.text,
@@ -47,7 +47,7 @@ const About = ({ aboutParagraph }) => {
                 target="_blank"
               >
                 <Image
-                  src={socials[key].icon}
+                  src={urlFor(socials[key].icon).url()}
                   alt={key}
                   width={48}
                   height={48}

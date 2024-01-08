@@ -1,10 +1,9 @@
 "use client";
 import React from "react";
 import { menuItems } from "@/content/navbar";
-import { volunteering } from "@/content/volunteering";
 import { useSectionInView } from "@/hooks/active-section-context";
 
-const Volunteering = () => {
+const Volunteering = ({ volunteering }) => {
   const { ref } = useSectionInView(menuItems.volunteering.id);
   return (
     <section id="volunteering" className="section" ref={ref}>
