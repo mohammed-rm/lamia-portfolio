@@ -2,11 +2,11 @@
 import React from "react";
 import Image from "next/image";
 import heroImage from "@/public/hero-image.png";
-import { heroInfo } from "@/content/hero";
+// import { heroInfo } from "@/content/hero";
 import { useSectionInView } from "@/hooks/active-section-context";
 import { motion } from "framer-motion";
 
-const Hero = () => {
+const Hero = ({ heroInfo }) => {
   const { ref } = useSectionInView("hero");
   return (
     <section id="hero" className="min-h-screen md:pt-20 bg-green-50" ref={ref}>
