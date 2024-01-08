@@ -11,6 +11,7 @@ import { getVolunteering } from "@/fetch-content/getVolunteering";
 import { getBlog } from "@/fetch-content/getBlog";
 import { getSocials } from "@/fetch-content/getSocials";
 import About from "@/sections/about";
+import { getBadges } from "@/fetch-content/getBadges";
 
 export const revalidate = 10;
 
@@ -20,6 +21,9 @@ export default async function Home() {
   const volunteeringData = await getVolunteering();
   const blogData = await getBlog();
   const socialsData = await getSocials();
+  // const projectsData = await getProjects();
+  const badgesData = await getBadges();
+  // const certificatesData = await getCertificates();
 
   return (
     <main>
@@ -28,7 +32,7 @@ export default async function Home() {
       <About aboutParagraph={aboutData} socials={socialsData} />
       <Projects />
       <Certificates />
-      <Badges />
+      <Badges badges={badgesData} />
       <Blog blog={blogData} />
       <Volunteering volunteering={volunteeringData} />
     </main>

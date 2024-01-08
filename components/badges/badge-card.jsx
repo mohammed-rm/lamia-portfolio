@@ -10,6 +10,7 @@ import {
 import Image from "next/image";
 import Link from "next/link";
 import { RxExternalLink } from "react-icons/rx";
+import { urlFor } from "@/lib/sanity";
 
 const BadgeCard = ({ title, keywords, badgeIcon, link }) => {
   return (
@@ -51,7 +52,9 @@ const BadgeCard = ({ title, keywords, badgeIcon, link }) => {
       <Image
         alt="Badge icon"
         radius="sm"
-        src={badgeIcon}
+        src={urlFor(badgeIcon).url()}
+        width={1000}
+        height={1000}
         className="absolute left-6 -top-10 w-[80px] h-[80px]"
       />
     </div>
