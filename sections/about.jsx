@@ -1,6 +1,5 @@
 "use client";
 import React from "react";
-import { aboutParagraph } from "@/content/about";
 import { menuItems } from "@/content/navbar";
 import useColoredTextRenderer from "@/hooks/colored-phrases";
 import { socials } from "@/content/socials";
@@ -9,7 +8,7 @@ import Link from "next/link";
 import { Card, CardFooter } from "@nextui-org/react";
 import { useSectionInView } from "@/hooks/active-section-context";
 
-const About = () => {
+const About = ({ aboutParagraph }) => {
   const { ref } = useSectionInView(menuItems.about.id);
   const renderedText = useColoredTextRenderer(
     aboutParagraph.text,

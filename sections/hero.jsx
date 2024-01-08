@@ -2,7 +2,6 @@
 import React from "react";
 import Image from "next/image";
 import heroImage from "@/public/hero-image.png";
-// import { heroInfo } from "@/content/hero";
 import { useSectionInView } from "@/hooks/active-section-context";
 import { motion } from "framer-motion";
 
