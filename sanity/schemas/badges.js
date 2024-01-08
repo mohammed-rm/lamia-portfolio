@@ -3,8 +3,9 @@ export default {
   type: 'document',
   title: 'Section Badges',
   fields: [
+    {name: 'title', type: 'string'},
     {
-      name: 'title',
+      name: 'header',
       type: 'string',
       title: 'Texte descriptif',
     },

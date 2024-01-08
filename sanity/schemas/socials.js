@@ -2,7 +2,11 @@ export default {
   name: 'socials',
   type: 'document',
   title: 'Réseaux sociaux',
+  initialValue: {
+    title: 'Réseaux sociaux',
+  },
   fields: [
+    {name: 'title', type: 'string', readOnly: true},
     {
       name: 'linkedin',
       type: 'object',
