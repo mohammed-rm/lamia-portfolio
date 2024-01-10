@@ -17,7 +17,7 @@ const BadgeCard = ({ title, keywords, badgeIcon, link }) => {
     <div className="relative">
       <Card
         radius="sm"
-        className="max-w-[300px] h-[300px] cards-style bg-opacity-80 bg-gradient-to-b from-primary-100 via-secondary-50 to-primary-dark"
+        className="w-[200px] sm:w-[300px] max-w-[300px] h-[300px] cards-style bg-opacity-80 bg-gradient-to-b from-primary-100 via-secondary-50 to-primary-dark"
         shadow
       >
         <CardBody className="mt-12 px-6 space-y-6 scrollbar-thin scrollbar-thumb-green-200 scrollbar-track-secondary-100">
