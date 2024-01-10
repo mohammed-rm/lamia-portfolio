@@ -13,7 +13,7 @@ import ImageCard from "@/components/certificates/image-card";
 
 export function ImagesCarousel({ images }) {
   const [api, setApi] = React.useState();
-  const [current, setCurrent] = React.useState(0);
+  const [current, setCurrent] = React.useState(1);
 
   const plugin = React.useRef(
     Autoplay({ delay: 2000, stopOnInteraction: true }),
@@ -23,12 +23,12 @@ export function ImagesCarousel({ images }) {
     if (!api) {
       return;
     }
-    setCurrent(api.selectedScrollSnap() + 1);
+    setCurrent(1);
 
     api.on("select", () => {
       setCurrent(api.selectedScrollSnap() + 1);
     });
-  }, [api]);
+  }, [api, images]);
 
   return (
     <div className="flex flex-col gap-y-2 items-center">
