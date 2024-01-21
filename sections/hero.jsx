@@ -11,7 +11,7 @@ const Hero = ({ heroInfo }) => {
     <section id="hero" className="min-h-screen 2xl:pt-20 bg-green-50" ref={ref}>
       <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:justify-evenly">
         <motion.div
-          className="mt-24 flex flex-col space-y-6 items-center lg:items-start lg:w-2/5"
+          className="mt-24 flex flex-col space-y-6 items-center lg:items-start lg:w-2/5 p-6 lg:p-0"
           initial={{ x: -1000 }}
           animate={{ x: 0 }}
           transition={{ duration: 0.8, ease: "easeInOut" }}
@@ -22,7 +22,7 @@ const Hero = ({ heroInfo }) => {
               <span className="purple-gradient">{heroInfo.role}</span>
             </p>
           </span>
-          <p className="p-6 text-center md:text-2xl tracking-wide md:tracking-widest lg:text-start lg:p-0">
+          <p className="text-center md:text-2xl tracking-wide md:tracking-widest lg:text-start lg:p-0">
             {heroInfo.description}
           </p>
         </motion.div>
