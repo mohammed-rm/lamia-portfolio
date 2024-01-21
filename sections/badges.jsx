@@ -10,7 +10,7 @@ const Badges = ({ badges }) => {
     <section id="badges" className="section relative" ref={ref}>
       <p className="section-title">{menuItems.badges.navbarTitle}</p>
 
-      <div className="mt-56 w-full container mx-auto md:ml-20 md:mr-20 flex flex-wrap justify-center gap-12 z-10">
+      <div className="mt-56 w-full container mx-auto md:ml-20 md:mr-20 flex flex-col lg:flex-row justify-center gap-12 z-10">
         {Object.values(badges).map((badge, index) => (
           <BadgeCard
             key={index}
