@@ -10,8 +10,9 @@ import ActiveSectionContextProvider from "@/context/active-section-context";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "Lamia Portfolio",
-  description: "Portfolio",
+  title: "Portfolio de Lamia",
+  description:
+    "Découvrez mon portfolio dédié à l'excellence en matière d'analyse et de gestion des données.",
 };
 
 export default function RootLayout({ children }) {
