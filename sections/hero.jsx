@@ -8,7 +8,7 @@ import { motion } from "framer-motion";
 const Hero = ({ heroInfo }) => {
   const { ref } = useSectionInView("hero");
   return (
-    <section id="hero" className="min-h-screen md:pt-20 bg-green-50" ref={ref}>
+    <section id="hero" className="min-h-screen 2xl:pt-20 bg-green-50" ref={ref}>
       <div className="flex flex-col lg:flex-row items-center space-y-6 lg:space-y-0 lg:justify-evenly">
         <motion.div
           className="mt-24 flex flex-col space-y-6 items-center lg:items-start lg:w-2/5"
