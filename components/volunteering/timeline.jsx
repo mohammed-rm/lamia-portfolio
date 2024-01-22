@@ -3,6 +3,8 @@ import { Card, CardBody, Divider } from "@nextui-org/react";
 import { GiMoebiusTriangle } from "react-icons/gi";
 import { AiOutlineSmallDash } from "react-icons/ai";
 import ColoredParagraph from "@/components/ui/colored-paragraph";
+import { motion } from "framer-motion";
+import { useInView } from "react-intersection-observer";
 
 const Timeline = ({ activities }) => {
   return (
@@ -13,6 +15,10 @@ const Timeline = ({ activities }) => {
       <Divider className="absolute left-1 lg:left-1/2 border-2 w-[2px] h-full bg-primary" />
 
       {activities.map((activity, index) => {
+        const [ref, inView] = useInView({
+          triggerOnce: false,
+          threshold: 0.5,
+        });
         return (
           <div
             key={index}
@@ -30,13 +36,23 @@ const Timeline = ({ activities }) => {
               className={`lg:hidden absolute w-16 h-14 text-primary top-7 transform -translate-y-1/2 left-7`}
             />
             <Card
-              className={`p-4 bg-opacity-40 w-auto lg:max-w-[420px] xl:max-w-lg h-fit mr-2 md:mr-0 ml-20 lg:ml-0 rounded-md
+              className={`w-auto lg:max-w-[420px] xl:max-w-lg h-fit mr-2 md:mr-0 ml-20 lg:ml-0 rounded-md drop-shadow-lg
+              p-[2px] bg-gradient-to-b from-blue-300 to-pink-200
             ${index % 2 === 0 ? "lg:ml-20" : "lg:mr-20"}`}
             >
-              <CardBody>
-                <p className="text-xl text-primary mb-4 font-semibold">
+              <CardBody className="bg-gradient-to-br from-slate-50 to-slate-200 rounded-md">
+                <motion.p
+                  className="text-xl text-primary mb-4 font-semibold"
+                  ref={ref}
+                  initial={{ scale: 0.5, opacity: 0 }}
+                  animate={{
+                    scale: inView ? 1 : 0.5,
+                    opacity: inView ? 1 : 0,
+                  }}
+                  transition={{ duration: 0.5 }}
+                >
                   {activity.date}
-                </p>
+                </motion.p>
                 <p>
                   <ColoredParagraph
                     paragraph={activity.description}
