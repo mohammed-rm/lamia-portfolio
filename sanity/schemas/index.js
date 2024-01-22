@@ -6,6 +6,7 @@ import socials from './socials'
 import badges from './badges'
 import {projectDetail, projects, subCategory} from './projects'
 import certificates from './certificates'
+import timeline from './volunteering-timeline'
 
 export const schemaTypes = [
   hero,
@@ -18,4 +19,5 @@ export const schemaTypes = [
   subCategory,
   projectDetail,
   certificates,
+  timeline,
 ]

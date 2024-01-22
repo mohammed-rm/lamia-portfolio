@@ -14,6 +14,7 @@ import { getBadges } from "@/fetch-content/getBadges";
 import { getProjects } from "@/fetch-content/getProjects";
 import { getCertificates } from "@/fetch-content/getCertificates";
 import Certificates from "@/sections/certificates";
+import { getTimeline } from "@/fetch-content/getTimeline";
 
 export const revalidate = 10;
 
@@ -26,6 +27,7 @@ export default async function Home() {
   const projectsData = await getProjects();
   const badgesData = await getBadges();
   const certificatesData = await getCertificates();
+  const timelineData = await getTimeline();
 
   return (
     <main>
@@ -36,7 +38,7 @@ export default async function Home() {
       <Certificates certificates={certificatesData} />
       <Badges badges={badgesData} />
       <Blog blog={blogData} />
-      <Volunteering volunteering={volunteeringData} />
+      <Volunteering volunteering={volunteeringData} timeline={timelineData} />
     </main>
   );
 }
