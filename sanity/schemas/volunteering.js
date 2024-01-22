@@ -12,5 +12,6 @@ export default {
       type: 'text',
       title: 'Pragraphe descriptif',
     },
+    {name: 'coloredPhrases', type: 'array', of: [{type: 'string'}], title: 'Phrases colorées'},
   ],
 }

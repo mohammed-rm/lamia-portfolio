@@ -57,7 +57,7 @@ const Timeline = ({ activities }) => {
                   <ColoredParagraph
                     paragraph={activity.description}
                     coloredWords={activity.coloredPhrases}
-                    className="font-bold underline"
+                    className="font-bold italic"
                   />
                 </p>
               </CardBody>
