@@ -4,7 +4,6 @@ import { GiMoebiusTriangle } from "react-icons/gi";
 import { AiOutlineSmallDash } from "react-icons/ai";
 import ColoredParagraph from "@/components/ui/colored-paragraph";
 import { motion } from "framer-motion";
-import { useInView } from "react-intersection-observer";
 
 const Timeline = ({ activities }) => {
   return (
@@ -15,10 +14,6 @@ const Timeline = ({ activities }) => {
       <Divider className="absolute left-1 lg:left-1/2 border-2 w-[2px] h-full bg-primary" />
 
       {activities.map((activity, index) => {
-        const [ref, inView] = useInView({
-          triggerOnce: false,
-          threshold: 0.5,
-        });
         return (
           <div
             key={index}
@@ -43,12 +38,9 @@ const Timeline = ({ activities }) => {
               <CardBody className="bg-gradient-to-br from-slate-50 to-slate-200 rounded-md">
                 <motion.p
                   className="text-xl text-primary mb-4 font-semibold"
-                  ref={ref}
                   initial={{ scale: 0.5, opacity: 0 }}
-                  animate={{
-                    scale: inView ? 1 : 0.5,
-                    opacity: inView ? 1 : 0,
-                  }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: false }}
                   transition={{ duration: 0.5 }}
                 >
                   {activity.date}
